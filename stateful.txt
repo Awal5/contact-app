@@ -1,0 +1,23 @@
+Class Component
+React component dapat dibuat menggunakan sintaksis class atau biasa disebut dengan class component. Perbedaan paling mendasar antara class component dan functional component adalah soal benefit yang didapatkan. Dengan class component, Anda bisa memanfaatkan fitur state dan life cycle.
+
+State Component
+State merupakan data yang disimpan di dalam component dan dapat berubah. Perubahan state memicu pemanggilan method render pada component sehingga UI dapat menampilkan data (state) terbaru.
+
+Meskipun state dan props dapat menyimpan data, tetapi keduanya hal yang berbeda. Data di dalam props berasal dari luar komponen dan diharapkan untuk tidak berubah, sedangkan data di dalam state diinisialisasi dan berada di dalam komponen itu sendiri serta datanya boleh untuk berubah.
+
+State di dalam class component dapat diakses melalui properti this.state dan datanya diinisialisasi di dalam constructor.
+
+Event Handling
+Event handling di React mirip seperti DOM. Namun, Dalam pemberian nama event, alih-alih menggunakan lowercase, React selalu menggunakan camelCase. Jadi penulisan event onclick di React adalah onClick.
+
+Controlled Component
+Controlled Component merupakan component yang me-render form, tetapi “single source of truth” atau sumber datanya diambil dari component state, bukan DOM. Alasan mengapa ia disebut dengan controlled component karena React mengontrol data form.
+
+Pada controlled component, value dari input diambil dari nilai component state. Untuk mengubah value, berarti kita perlu mengubah state. Dengan begitu, kita perlu menambahkan event onChange pada input dan memberikan handler untuk mengubah state berdasarkan perubahan input.
+
+Tidak menampilkan apa pun
+Jika Anda ingin komponen tidak menampilkan apa pun, cukup kembalikan fungsi atau method render dengan null.
+
+React Fragment
+Jika Anda ingin JSX mengembalikan satu top level element saja tanpa ingin mengubah markup karena penambahan ekstra element, bungkuslah seluruh element dengan <React.Fragment>. Penggunaan React.Fragment memiliki cara pintas yakni cukup dengan menuliskan tanda <>..</>

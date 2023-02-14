@@ -1,0 +1,26 @@
+React Element
+Seluruh antarmuka pengguna (UI) aplikasi React dibangun menggunakan React element. Sama seperti DOM element, React element dapat berupa paragraf, heading, atau gambar. React element merepresentasikan apa yang Anda lihat di layar[3].
+Fungsi createElement menerima 3 parameter yakni type yang merupakan tipe elemen, property merupakan properti dari elemen, dan content merupakan konten dari elemen.
+
+JSX
+Selain menggunakan fungsi createElement, Anda juga bisa membuat element dengan sintaksis JSX. Dengan JSX, pembuatan elemen jauh lebih mudah dan bersifat deklaratif. Sintaksis JSX mengembalikan React element sesuai dengan yang Anda deklarasikan. Sintaksis JSX mirip seperti HTML karena memanfaatkan tag--khas gaya markup--dalam mendeklarasikan elemen. 
+
+JSX hanya mengembalikan satu element
+Ketika menuliskan JSX, pastikan ia hanya mengembalikan satu elemen. Meskipun React element bisa nested, tapi pastikan hanya ada satu root element yang membungkus seluruh element di dalamnya
+
+
+React Component
+React component merupakan fungsi JavaScript yang mengembalikan React element. Alasan mengapa kita membuat React component sama dengan kapan kita harus membuat sebuah fungsi. Namun, alih-alih mengembalikan data, React component mengembalikan UI dalam bentuk React element.
+
+Terdapat 2 alasan mengapa Anda perlu membuat component:
+
+1. Pembuatan UI (React element) membutuhkan logika yang tidak sederhana, serta Anda ingin proses pembuatan UI tersebut terisolasi. Dengan begitu, kode dalam membuat UI tersebut tidak mengganggu kode lainnya.
+2. Anda ingin membuat UI yang bersifat reusable. Artinya, hanya dengan satu kode UI tetapi dapat digunakan sebanyak apa pun dengan banyak varian data.
+
+Component Properties
+Karena React component merupakan fungsi JavaScript, maka kita dapat memberikan parameter ketika menggunakannya. Namun React component hanya dapat menerima satu parameter--berupa objek--yang biasa kita sebut dengan properties (props).
+
+Compositional Component
+Semakin kecil kita membuat sebuah component, semakin reusable UI yang kita bangun dan React mendorong kita untuk membangun aplikasi dengan pendekatan composition daripada inheritance[6] untuk menghasilkan UI yang lebih kompleks.
+
+Ada sedikit hal yang perlu kita tambahkan ketika me-render React element atau component sebagai list. Yaitu pastikan kita menambahkan properti key pada tiap item element/component yang hendak ditampilkan. Tujuannya adalah sebagai tanda bahwa masing-masing element/component yang ditampilkan adalah unik.
